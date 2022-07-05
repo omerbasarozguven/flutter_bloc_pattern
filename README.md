@@ -27,14 +27,29 @@ Installs the required packages for the app.
 
 Lists the available devices to choose from and launches the app on the chosen platform.
 
-#### For spesific platforms:
-##### `flutter run -d linux`
-launches the app on Linux.
+#### For Desktop and Web Platforms:
 
-##### `flutter run -d macos`
-launches the app on macOS.
+`flutter run -d linux`
 
-##### `flutter run -d windows`
-launches the app on Windows.
+`flutter run -d macos`
 
-##### `flutter build linux`
+`flutter run -d windows`
+
+`flutter run -d chorme`
+
+Note: for running on ios and android emulators or devices you can use `flutter devices` to see the list of avalible devices,
+and write `flutter run -d device_name`
+
+### To Generate Release Builds:
+
+`flutter build linux`
+
+`flutter build macos`
+
+`flutter build windows`
+
+`flutter build web`
+
+`flutter build apk`
+
+`flutter build ios`
