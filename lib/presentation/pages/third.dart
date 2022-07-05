@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_pattern/cubit/counter_cubit.dart';
+import 'package:flutter_bloc_pattern/cubit/textfield_cubit.dart';
 
 class ThirdPage extends StatefulWidget {
   const ThirdPage({Key? key}) : super(key: key);
@@ -14,30 +15,38 @@ class _ThirdPageState extends State<ThirdPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Third Page'),
+        title: const Text('Third Page'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('You have pushed the button this many times:'),
-            SizedBox(height: 24),
+            const Text('You have pushed the button this many times:'),
+            const SizedBox(height: 24),
             BlocBuilder<CounterCubit, CounterState>(builder: (context, state) {
               return Text(state.counterValue.toString());
             }),
-            SizedBox(height: 24),
-            Text('The text you wrote was'),
-            SizedBox(height: 24),
-            BlocBuilder<CounterCubit, CounterState>(builder: (context, state) {
-              return Text(state.str!);
+            const SizedBox(height: 24),
+            BlocBuilder<TextFieldCubit, TextFieldState>(
+                builder: (context, state) {
+              return Text('The text you wrote was ' + state.str);
             }),
-            SizedBox(height: 24),
-            ElevatedButton(
-                onPressed: () {
-                  BlocProvider.of<CounterCubit>(context).takeString('');
-                  Navigator.of(context).pushNamed('/second');
-                },
-                child: Text('Go to second page')),
+            const SizedBox(height: 24),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).pushNamed('/second');
+                    },
+                    child: const Text('Go to second page')),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).pushNamed('/');
+                    },
+                    child: const Text('Go to first page')),
+              ],
+            ),
           ],
         ),
       ),
