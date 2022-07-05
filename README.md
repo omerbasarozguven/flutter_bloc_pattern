@@ -27,4 +27,4 @@ Installs the required packages for the app.
 
 Runs the app in the development mode, through connected devices
 
-## For spesific platforms
+#### For spesific platforms
