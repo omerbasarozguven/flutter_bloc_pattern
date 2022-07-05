@@ -14,30 +14,30 @@ class _ThirdPageState extends State<ThirdPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Third Page'),
+        title: const Text('Third Page'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('You have pushed the button this many times:'),
-            SizedBox(height: 24),
+            const Text('You have pushed the button this many times:'),
+            const SizedBox(height: 24),
             BlocBuilder<CounterCubit, CounterState>(builder: (context, state) {
               return Text(state.counterValue.toString());
             }),
-            SizedBox(height: 24),
-            Text('The text you wrote was'),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
+            const Text('The text you wrote was'),
+            const SizedBox(height: 24),
             BlocBuilder<CounterCubit, CounterState>(builder: (context, state) {
               return Text(state.str!);
             }),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             ElevatedButton(
                 onPressed: () {
                   BlocProvider.of<CounterCubit>(context).takeString('');
                   Navigator.of(context).pushNamed('/second');
                 },
-                child: Text('Go to second page')),
+                child: const Text('Go to second page')),
           ],
         ),
       ),

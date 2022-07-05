@@ -29,27 +29,27 @@ class _SecondPageState extends State<SecondPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Second Page'),
+        title: const Text('Second Page'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('You have pushed the button this many times:'),
-            SizedBox(height: 24),
+            const Text('You have pushed the button this many times:'),
+            const SizedBox(height: 24),
             BlocBuilder<CounterCubit, CounterState>(builder: (context, state) {
               return Text(state.counterValue.toString());
             }),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             TextField(
               controller: mycontroller,
             ),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).pushNamed('/third');
                 },
-                child: Text('go to third page'))
+                child: const Text('go to third page'))
           ],
         ),
       ),

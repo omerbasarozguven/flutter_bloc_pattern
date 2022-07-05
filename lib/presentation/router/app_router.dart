@@ -9,13 +9,13 @@ class AppRouter {
   Route onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case '/':
-        return MaterialPageRoute(builder: (_) => HomePage());
+        return MaterialPageRoute(builder: (_) => const HomePage());
       case '/second':
-        return MaterialPageRoute(builder: (_) => SecondPage());
+        return MaterialPageRoute(builder: (_) => const SecondPage());
       case '/third':
-        return MaterialPageRoute(builder: (_) => ThirdPage());
+        return MaterialPageRoute(builder: (_) => const ThirdPage());
       default:
-        return MaterialPageRoute(builder: (_) => HomePage());
+        return MaterialPageRoute(builder: (_) => const HomePage());
     }
   }
 }
