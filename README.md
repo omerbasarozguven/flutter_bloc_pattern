@@ -27,15 +27,4 @@ Installs the required packages for the app.
 
 Lists the available devices to choose from and launches the app on the chosen platform.
 
-For spesific platforms:
-
-#### `flutter run -d linux`
-launches the app on Linux.
-
-#### `flutter run -d macos`
-launches the app on macOS.
-
-#### `flutter run -d windows`
-launches the app on Windows.
-
-#### `flutter build linux`
+#### For spesific platforms
