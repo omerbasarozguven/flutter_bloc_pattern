@@ -35,7 +35,7 @@ Lists the available devices to choose from and launches the app on the chosen pl
 
 `flutter run -d windows`
 
-`flutter run -d chorme`
+`flutter run -d chrome`
 
 Note: for running on ios and android emulators or devices you can use `flutter devices` to see the list of avalible devices,
 and write `flutter run -d device_name`
